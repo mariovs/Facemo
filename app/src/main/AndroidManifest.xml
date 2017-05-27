@@ -41,6 +41,7 @@
 
         </activity>
         <activity
+
             android:name=".CameraRecordingActivity"
             android:label="@string/title_activity_camera_recording"
             android:theme="@style/AppTheme.NoActionBar">
