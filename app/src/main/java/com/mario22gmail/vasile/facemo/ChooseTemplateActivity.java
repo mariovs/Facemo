@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import java.lang.String;
 
 public class ChooseTemplateActivity extends AppCompatActivity {
 
@@ -29,14 +30,20 @@ public class ChooseTemplateActivity extends AppCompatActivity {
 
     public void selectVideo1(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        String video = "godfather";
+        intent.putExtra("film", video);
         startActivity(intent);
     }
     public void selectVideo2(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        String video = "scarface";
+        intent.putExtra("film", video);
         startActivity(intent);
     }
     public void selectVideo3(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        String video = "gladiator";
+        intent.putExtra("film", video);
         startActivity(intent);
     }
 
