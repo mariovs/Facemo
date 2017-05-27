@@ -10,6 +10,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.VideoView;
 
+import org.opencv.android.OpenCVLoader;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -40,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         surfaceView = (SurfaceView) findViewById(R.id.surfaceView);
         surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
+
+        
+
+
 
     }
 
