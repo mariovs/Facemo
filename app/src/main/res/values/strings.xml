@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Facemo</string>
+    <string name="title_activity_face_detection">FaceDetectionActivity</string>
 </resources>
