@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -104,7 +105,7 @@ public class CameraRecordingFragment extends android.app.Fragment
         /**
          * Button to record video
          */
-        private Button mButtonVideo;
+        private FloatingActionButton mButtonVideo;
 
         /**
          * A reference to the opened {@link android.hardware.camera2.CameraDevice}.
@@ -282,7 +283,7 @@ public class CameraRecordingFragment extends android.app.Fragment
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
-        mButtonVideo = (Button) view.findViewById(R.id.video);
+        mButtonVideo = (FloatingActionButton) view.findViewById(R.id.video);
         mButtonVideo.setOnClickListener(this);
         view.findViewById(R.id.info).setOnClickListener(this);
     }
@@ -645,7 +646,8 @@ public class CameraRecordingFragment extends android.app.Fragment
                         @Override
                         public void run() {
                             // UI
-                            mButtonVideo.setText(R.string.stop);
+//                            mButtonVideo.setText(R.string.stop);
+                            mButtonVideo.setImageResource(R.drawable.ic_fiber_manual_record);
                             mIsRecordingVideo = true;
 
                             // Start recording
@@ -678,7 +680,8 @@ public class CameraRecordingFragment extends android.app.Fragment
     private void stopRecordingVideo() {
         // UI
         mIsRecordingVideo = false;
-        mButtonVideo.setText(R.string.record);
+//        mButtonVideo.setText(R.string.record);
+        mButtonVideo.setImageResource(R.drawable.ic_play_arrow);
 
         try {
             mPreviewSession.stopRepeating();

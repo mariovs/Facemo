@@ -33,12 +33,19 @@
         android:layout_alignParentStart="true"
         android:background="#00000000">
 
-        <Button
+        <!--<Button-->
+            <!--android:id="@+id/video"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="Record" />-->
+
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:text="Record" />
+            android:src="@drawable/ic_movie"/>
 
         <ImageButton
             android:id="@+id/info"
